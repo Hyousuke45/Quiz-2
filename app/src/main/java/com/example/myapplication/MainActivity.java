@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
             DiceView diceView = new DiceView(this);
 
-            // 90dp size
+            // 90dp
             int size = (int) (
                     90 * getResources().getDisplayMetrics().density
             );
@@ -129,9 +129,9 @@ public class MainActivity extends AppCompatActivity {
             params.setMargins(10, 10, 10, 10);
 
             /*
-             * If there are 3 dice and this is the
-             * third die, make it span both columns.
+             * kung naay 3 ka dice, dapat 2 sa babaw 1 sa ubos centered
              */
+
             if (numberOfDice == 3 && i == 2) {
 
                 params.columnSpec =
@@ -144,13 +144,13 @@ public class MainActivity extends AppCompatActivity {
 
             diceView.setLayoutParams(params);
 
-            // Start with number 1
+            // Sugod sa 1
             diceView.setNumber(1);
 
-            // Add dice to grid
+
             diceGrid.addView(diceView);
 
-            // Save dice
+
             diceViews.add(diceView);
         }
 
@@ -159,8 +159,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Rolls all selected dice.
+     * diceroll tanan
      */
+
     private void rollDice() {
 
         rollButton.setEnabled(false);
