@@ -250,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
 
                         StringBuilder resultString =
                                 new StringBuilder();
-
+                        int totalResult = 0;
                         // Set each die's result
                         for (int i = 0; i < diceViews.size(); i++) {
 
@@ -266,10 +266,10 @@ public class MainActivity extends AppCompatActivity {
                             if (i > 0) {
                                 resultString.append(", ");
                             }
-
+                            totalResult += result;
                             resultString.append(result);
                         }
-
+                        resultString.append("\n`Total: " + totalResult);
 
                         // Display result
                         resultText.setText(
